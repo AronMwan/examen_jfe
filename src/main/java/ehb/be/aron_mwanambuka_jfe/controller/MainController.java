@@ -52,8 +52,8 @@ public class MainController {
     }
 
     @GetMapping("/api/reservations")
-    public Iterable<Vakantiehuis> getAvailableLocations() {
-        return vakantiehuisDAO.momenteelBeschikbaar(LocalDate.now());
+    public Iterable<Vakantiehuis> getAvailableLocations(@RequestParam boolean beschikbaar) {
+        return vakantiehuisDAO.momenteelBeschikbaar(beschikbaar);
     }
 
     @PostMapping("/api/reservations")

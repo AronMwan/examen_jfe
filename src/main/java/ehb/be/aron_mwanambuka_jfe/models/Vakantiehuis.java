@@ -15,15 +15,17 @@ public class Vakantiehuis {
     private int huisnummer;
     private int postcode;
     private int oppervlakte;
+    private boolean beschikbaar;
 
     public Vakantiehuis() {
     }
 
-    public Vakantiehuis(String straatnaam, int huisnummer, int postcode, int oppervlakte) {
+    public Vakantiehuis(String straatnaam, int huisnummer, int postcode, int oppervlakte, boolean beschikbaar) {
         this.straatnaam = straatnaam;
         this.huisnummer = huisnummer;
         this.postcode = postcode;
         this.oppervlakte = oppervlakte;
+        this.beschikbaar = beschikbaar;
     }
 
     public Long getId() {
@@ -64,5 +66,13 @@ public class Vakantiehuis {
 
     public void setOppervlakte(int oppervlakte) {
         this.oppervlakte = oppervlakte;
+    }
+
+    public boolean isBeschikbaar() {
+        return beschikbaar;
+    }
+
+    public void setBeschikbaar(boolean beschikbaar) {
+        this.beschikbaar = beschikbaar;
     }
 }
